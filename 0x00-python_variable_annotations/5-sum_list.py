@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
-from typing import List
 """Takes a list as an argument and returns their sum"""
+from typing import List
 
 
 def sum_list(input_list: List[float]) -> float:
