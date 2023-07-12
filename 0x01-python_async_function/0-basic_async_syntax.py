@@ -1,13 +1,19 @@
 #!/usr/bin/env python3
+"""Write an asynchronous coroutine that takes in an integer argument
+(max_delay, with a default value of 10) named wait_random that waits
+for a random delay between 0 and max_delay (included and float value)
+seconds and eventually returns it.
 
-""" Python Async function"""
+Use the random module.
+"""
+
+
+import random
 import asyncio
-from random import uniform, random 
 
 
 async def wait_random(max_delay: int = 10) -> float:
-    """async function that sleeps for 10 secs and returns
-    its  sleep value """
-    delay = random() * max_delay
-    await asyncio.sleep(delay)
-    return delay
+    """Wait for some time"""
+    wait_time = random.random() * max_delay
+    await asyncio.sleep(wait_time)
+    return wait_time
